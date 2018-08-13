@@ -10,6 +10,7 @@ SET EXCLUSIVE OFF     && (Ë½ÓÐÊý¾Ý¹¤×÷ÆÚµÄÄ¬ÈÏ·½Ê½)ÔÊÐíÍøÂçÉÏµÄÈÎºÎÓÃ»§¹²ÏíºÍÐÞ¸
 SET HELP ON           && ÔÊÐí´ò¿ª°ïÖú
 SET ESCAPE OFF        && ½ûÖ¹ÔËÐÐµÄ³ÌÐòÔÚ°´ Esc ¼üºó±»ÖÐ¶Ï
 SET NULLDISPLAY TO '' && È¥³ýÒ»ÇÐÖµ´ø null
+SET MULTILOCKS ON 
 
 *-----ÉèÖÃ³ÌÐòÖ÷Ä¿Â¼-------------------------
 RELEASE gcMainPath

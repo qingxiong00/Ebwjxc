@@ -1,14 +1,13 @@
-* json parse
-* return a collection
-oJson=foxJson_Parse('{"name":"lee","age":32, "childs":[{"name":"xiao ming","age":2},{"name":"baobao","age":5}]}')
-?"oJson.name",				oJson("name")
-?"oJson.age",				oJson.Item("age")
-?"oJson.childs",			oJson("childs").Count
-?"oJson.childs[1].Name",	oJson("childs").item(1).item("name")
-?"oJson.childs[1].age",		oJson("childs").item(1).item("age")
-?"oJson.childs[2].Name",	oJson("childs").item(2).item("name")
-?"oJson.childs[2].age",		oJson("childs").item(2).item("age")
-
+*!*	* json parse
+*!*	* return a collection
+*!*	oJson=foxJson_Parse('{"name":"lee","age":32, "childs":[{"name":"xiao ming","age":2},{"name":"baobao","age":5}]}')
+*!*	?"oJson.name",				oJson("name")
+*!*	?"oJson.age",				oJson.Item("age")
+*!*	?"oJson.childs",			oJson("childs").Count
+*!*	?"oJson.childs[1].Name",	oJson("childs").item(1).item("name")
+*!*	?"oJson.childs[1].age",		oJson("childs").item(1).item("age")
+*!*	?"oJson.childs[2].Name",	oJson("childs").item(2).item("name")
+*!*	?"oJson.childs[2].age",		oJson("childs").item(2).item("age")
 
 Procedure foxJson_Parse(cJson)
 	If Vartype(cJson)<>"C"

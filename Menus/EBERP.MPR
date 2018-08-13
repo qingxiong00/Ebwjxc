@@ -1,6 +1,6 @@
 *       *********************************************************
 *       *                                                         
-*       * 08/07/18              EBERP.MPR               22:59:02  
+*       * 2018.08.13             EBERP.MPR              17:28:44  
 *       *                                                         
 *       *********************************************************
 *       *                                                         
@@ -130,21 +130,21 @@ IF m.lHasNewMenu
 	DEFINE MENU (m.cMenuName) IN (m.oFormRef.Name) BAR
 ENDIF
 
-DEFINE PAD _59l1d9gao OF (m.cMenuName) PROMPT "系统设置(\<E)" COLOR SCHEME 3 ;
+DEFINE PAD _59r11goiz OF (m.cMenuName) PROMPT "系统设置(\<E)" COLOR SCHEME 3 ;
 	KEY ALT+E, ""
-DEFINE PAD _59l1d9gap OF (m.cMenuName) PROMPT "基础信息(\<J)" COLOR SCHEME 3 ;
+DEFINE PAD _59r11goj0 OF (m.cMenuName) PROMPT "基础信息(\<J)" COLOR SCHEME 3 ;
 	KEY ALT+J, ""
-DEFINE PAD _59l1d9gaq OF (m.cMenuName) PROMPT "发票管理(\<F)" COLOR SCHEME 3 ;
+DEFINE PAD _59r11goj1 OF (m.cMenuName) PROMPT "发票管理(\<F)" COLOR SCHEME 3 ;
 	KEY ALT+F, ""
-DEFINE PAD _59l1d9gar OF (m.cMenuName) PROMPT "附加功能(\<G)" COLOR SCHEME 3 ;
+DEFINE PAD _59r11goj2 OF (m.cMenuName) PROMPT "附加功能(\<G)" COLOR SCHEME 3 ;
 	KEY ALT+G, ""
-DEFINE PAD _59l1d9gas OF (m.cMenuName) PROMPT "关于(\<A)" COLOR SCHEME 3 ;
+DEFINE PAD _59r11goj3 OF (m.cMenuName) PROMPT "关于(\<A)" COLOR SCHEME 3 ;
 	KEY ALT+A, ""
-ON PAD _59l1d9gao OF (m.cMenuName) ACTIVATE POPUP (a_menupops[1])
-ON PAD _59l1d9gap OF (m.cMenuName) ACTIVATE POPUP (a_menupops[2])
-ON PAD _59l1d9gaq OF (m.cMenuName) ACTIVATE POPUP (a_menupops[3])
-ON PAD _59l1d9gar OF (m.cMenuName) ACTIVATE POPUP (a_menupops[4])
-ON PAD _59l1d9gas OF (m.cMenuName) ACTIVATE POPUP (a_menupops[5])
+ON PAD _59r11goiz OF (m.cMenuName) ACTIVATE POPUP (a_menupops[1])
+ON PAD _59r11goj0 OF (m.cMenuName) ACTIVATE POPUP (a_menupops[2])
+ON PAD _59r11goj1 OF (m.cMenuName) ACTIVATE POPUP (a_menupops[3])
+ON PAD _59r11goj2 OF (m.cMenuName) ACTIVATE POPUP (a_menupops[4])
+ON PAD _59r11goj3 OF (m.cMenuName) ACTIVATE POPUP (a_menupops[5])
 
 DEFINE POPUP (a_menupops[1]) MARGIN RELATIVE SHADOW COLOR SCHEME 4
 DEFINE BAR 1 OF (a_menupops[1]) PROMPT "\-"
@@ -157,11 +157,11 @@ ON SELECTION BAR 4 OF (a_menupops[1]) do a_退出系统.prg
 
 DEFINE POPUP (a_menupops[2]) MARGIN RELATIVE SHADOW COLOR SCHEME 4
 DEFINE BAR 1 OF (a_menupops[2]) PROMPT "\-"
-DEFINE BAR 2 OF (a_menupops[2]) PROMPT "产品录入"
-DEFINE BAR 3 OF (a_menupops[2]) PROMPT "产品查询"
+DEFINE BAR 2 OF (a_menupops[2]) PROMPT "供应商录入"
+DEFINE BAR 3 OF (a_menupops[2]) PROMPT "供应商查询"
 DEFINE BAR 4 OF (a_menupops[2]) PROMPT "\-"
-ON SELECTION BAR 2 OF (a_menupops[2]) do form ..\forms\c产品录入.scx
-ON SELECTION BAR 3 OF (a_menupops[2]) do form ..\forms\c产品查询.scx
+ON SELECTION BAR 2 OF (a_menupops[2]) do form ..\forms\g供应商录入.scx
+ON SELECTION BAR 3 OF (a_menupops[2]) do form ..\forms\g供应商查询.scx
 
 DEFINE POPUP (a_menupops[3]) MARGIN RELATIVE SHADOW COLOR SCHEME 4
 DEFINE BAR 1 OF (a_menupops[3]) PROMPT "\-"
@@ -198,7 +198,7 @@ DEFINE BAR 6 OF (a_menupops[5]) PROMPT "\-"
 DEFINE BAR 7 OF (a_menupops[5]) PROMPT "About"
 DEFINE BAR 8 OF (a_menupops[5]) PROMPT "\-"
 ON SELECTION BAR 5 OF (a_menupops[5]) ;
-	DO _59l1d9gat ;
+	DO _59r11goj4 ;
 	IN LOCFILE("\EBERP\MENUS\EBERP" ,"MPX;MPR|FXP;PRG" ,"WHERE is EBERP?")
 ON SELECTION BAR 7 OF (a_menupops[5]) do form about.scx
 
@@ -212,7 +212,7 @@ ENDIF
 
 *       *********************************************************
 *       *                                                         
-*       * _59L1D9GAT  ON SELECTION BAR 5 OF POPUP 关于a           
+*       * _59R11GOJ4  ON SELECTION BAR 5 OF POPUP 关于a           
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -223,7 +223,7 @@ ENDIF
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _59l1d9gat
+PROCEDURE _59r11goj4
 DECLARE INTEGER ShellExecute IN shell32.DLL INTEGER HWND, STRING,;
         STRING lpszFile,STRING ,STRING ,INTEGER
  lpszFile='www.ebongsoft.com'
