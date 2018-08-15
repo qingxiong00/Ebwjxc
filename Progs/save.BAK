@@ -33,8 +33,6 @@ DataPath = GETDIR("Where are your DBFs?") && getdir(）函数，选择文件
 ?datapath
 
 
-
-
 RETURN
 
 
