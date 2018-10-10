@@ -20,7 +20,7 @@ ReservedWords = [,DESC,DATE,RESERVED,PRINT,ID,VIEW,BY,DEFAULT,CURRENT,KEY,ORDER,
 
 *!*	连接SQL数据库-------------------------------------------------------------------------------
 *!*ConnStr = [Driver={SQL Server};Server=(local);UID=sa;PWD=;Database=NorthWind;]
-ConnStr = [Driver={SQL Server};Server=192.168.1.8;UID=sa;PWD=3b7d29akfq93lgs8;Database=EbERPdb;]
+ConnStr = [Driver={SQL Server};Server=123.207.38.110;UID=sa;PWD=Eb123456;Database=Ebjxcdb;]
 Handle = SQLSTRINGCONNECT( ConnStr )
 IF Handle < 1
 *!*	   MESSAGEBOX( "Unable to connect to SQL" + CHR(13) + ConnStr, 16 )
